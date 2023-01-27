@@ -209,18 +209,10 @@
 																</p>
 															</td>
 															<td style="width: 358px; text-align: left; border-color: #000000;">
-																<p style="text-align: left;">
-																	<span style="font-size: 10pt; font-family: Arial;"> {HOST.NAME1} ({HOST.IP1}) </span>
-																</p>
-																<p style="text-align: left;">
-																	<span style="font-size: 10pt; font-family: Arial;"> {{HOST.HOST}:system.uptime.last()} </span>
-																</p>
-																<p style="text-align: left;">
-																	<span style="font-size: 10pt; font-family: Arial;"> {{HOST.HOST}:system.cpu.util.last()} </span>
-																</p>
-																<p style="text-align: left;">
-																	<span style="font-size: 10pt; font-family: Arial;"> {{HOST.HOST}:vm.memory.utilization.last()} </span>
-																</p>
+																<p style="text-align: left;"><span style="font-size: 10pt; font-family: Arial;"> {HOST.NAME1} ({HOST.IP1}) </span></p>
+                                                                <p style="text-align: left;"><span style="font-size: 10pt; font-family: Arial;"> {?last(/{HOST.HOST}/system.uptime)} </span></p>
+                                                                <p style="text-align: left;"><span style="font-size: 10pt; font-family: Arial;"> {?last(/{HOST.HOST}/system.cpu.util)} </span></p>
+                                                                <p style="text-align: left;"><span style="font-size: 10pt; font-family: Arial;"> {?last(/{HOST.HOST}/vm.memory.utilization)} </span></p>
 															</td>
 														</tr>
 													</tbody>
